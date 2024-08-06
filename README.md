@@ -1,1 +1,1 @@
-# COSC55
+# COSC55 Milestone
