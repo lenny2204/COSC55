@@ -14,3 +14,9 @@ At least 3 links to references, tutorials, documentations that you might use to 
 - https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html
 - https://www.barracuda.com/support/glossary/aws-firewall
 - https://www.tufin.com/blog/firewall-policy-planning-crafting-robust-network-defense
+
+
+
+PART 2: Diagram/Plan
+![image](https://github.com/user-attachments/assets/1e927ec5-a92e-4b14-b341-d3e16ed2648b)
+More detailed 
