@@ -105,7 +105,7 @@ Task 1: Deploy a functional Cloud environment for your example organization
 - Deployed the Web Server Instance:
     - AMI: Chose Ubuntu
     - Subnet: Launched the web server in the public subnet.
-    - Security Group: Configured the security group to allow inbound HTTP (port 80), HTTPS (port 443), and SSH (port 22, restricted to your IP).
+    - Security Group: Configured the security group to allow inbound HTTP (port 80), HTTPS (port 443), and SSH (port 22, restricted to my IP).
     - ![image](https://github.com/user-attachments/assets/04b3416d-f647-4471-a94b-b3d23a5011a8)
   
 - Deployed the Database Server Instance:
@@ -121,7 +121,7 @@ Task 1: Deploy a functional Cloud environment for your example organization
 - Installed the Apache web server on the Ubuntu instance.
 - Enabled and started Apache to ensure it runs on system boot.
 - Deployed a Custom Web Page:
-    - Created a simple HTML and PHP page (index.html and info.php) to serve as your web application.
+    - Created a simple HTML and PHP page (index.html and info.php) to serve as the web application.
     - ![image](https://github.com/user-attachments/assets/2cf6dd01-fd0b-4f11-aefd-e0e1130f5b33)
     - ![image](https://github.com/user-attachments/assets/6a0f70a1-1e5e-455d-9b10-d194bc6453dc)
     - Verified that the page is accessible via the public IP address of the web server.
