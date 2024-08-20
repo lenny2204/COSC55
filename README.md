@@ -95,11 +95,10 @@ Task 1: Deploy a functional Cloud environment for your example organization
 - Set Up Subnets:
     - Public Subnet: Created a public subnet within the VPC to host the web server.
     - Private Subnet: Created a private subnet within the VPC to host the database server.
-- Attached an Internet Gateway:
 - Attached an Internet Gateway to the VPC to allow outbound internet access for the public subnet.
 - Configured Route Tables:
-- Public Subnet Route Table: Updated to include a route to the Internet Gateway for outbound traffic.
-- Private Subnet Route Table: Ensured it only allows internal communication (no direct internet access).
+    - Public Subnet Route Table: Updated to include a route to the Internet Gateway for outbound traffic.
+    - Private Subnet Route Table: Ensured it only allows internal communication (no direct internet access).
 
 2. EC2 Instances Deployment
 - Deployed the Web Server Instance:
