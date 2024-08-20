@@ -84,3 +84,68 @@ My Plan:
 - Task 6.1- Configure AWS Firewall Manager to manage security policies across all accounts within my organization.
 - Task 6.2- Define firewall policies for Security Groups, NACLs, and WAF using Firewall Manager. Apply these policies across the appropriate AWS accounts and resources.
 - Task 6.3- Regularly monitor the effectiveness of the policies through AWS Firewall Manager and adjust them as needed.
+
+
+
+Milestone 3:
+
+Task 1: Deploy a functional Cloud environment for your example organization
+1. VPC and Subnet Configuration
+- Created a Virtual Private Cloud (VPC)
+- Set Up Subnets:
+    - Public Subnet: Created a public subnet within the VPC to host the web server.
+    - Private Subnet: Created a private subnet within the VPC to host the database server.
+- Attached an Internet Gateway:
+- Attached an Internet Gateway to the VPC to allow outbound internet access for the public subnet.
+- Configured Route Tables:
+- Public Subnet Route Table: Updated to include a route to the Internet Gateway for outbound traffic.
+- Private Subnet Route Table: Ensured it only allows internal communication (no direct internet access).
+
+2. EC2 Instances Deployment
+- Deployed the Web Server Instance:
+    - AMI: Chose Ubuntu
+    - Subnet: Launched the web server in the public subnet.
+    - Security Group: Configured the security group to allow inbound HTTP (port 80), HTTPS (port 443), and SSH (port 22, restricted to your IP).
+    - ![image](https://github.com/user-attachments/assets/04b3416d-f647-4471-a94b-b3d23a5011a8)
+  
+- Deployed the Database Server Instance:
+    - AMI: Chose Ubuntu
+    - Subnet: Launched the database server in the private subnet.
+    - Security Group: Configured the security group to allow inbound MySQL traffic (port 3306) only from the web server’s IP address.
+    - ![image](https://github.com/user-attachments/assets/420e90a8-62b0-4278-8005-ccffbbd27195)
+
+3. SSH Key Management
+- Generated SSH Key Pair and used the key pair to SSH into the web server and database server instances
+
+4. Web Server Setup:
+- Installed the Apache web server on the Ubuntu instance.
+- Enabled and started Apache to ensure it runs on system boot.
+- Deployed a Custom Web Page:
+    - Created a simple HTML and PHP page (index.html and info.php) to serve as your web application.
+    - ![image](https://github.com/user-attachments/assets/2cf6dd01-fd0b-4f11-aefd-e0e1130f5b33)
+    - ![image](https://github.com/user-attachments/assets/6a0f70a1-1e5e-455d-9b10-d194bc6453dc)
+    - Verified that the page is accessible via the public IP address of the web server.
+
+5. Database Server Setup
+- Installed MySQL on the Ubuntu instance within the private subnet.
+- Enabled and started the MySQL service to ensure it runs on system boot.
+- Configured MySQL:
+    - Created a database (myapp_db) and a MySQL user (myapp_user) with appropriate privileges.
+    - Configured MySQL to allow connections from the web server’s private IP address.
+    - ![image](https://github.com/user-attachments/assets/aa9f0ae3-adc1-468c-a7a4-fb624567cbb9)
+
+ 
+Task 2: Test the Functionality of your Test Environment
+1. Connecting Web Server to Database
+- First tested the connection of my Web Server using my public ip:
+    - ![image](https://github.com/user-attachments/assets/d304722f-d97c-430f-a4c3-727b68cb44b9)
+- Configured PHP Script:
+    - Modified the info.php file on the web server to connect to the MySQL database using the mysqli extension.
+- Tested the Connection of Web Server to Database:
+    - Accessed info.php via the web server’s public IP to verify the connection to the MySQL database was successful.
+    - ![image](https://github.com/user-attachments/assets/4a96374e-121d-48f4-98d7-1872744eff1f)
+
+
+
+
+
