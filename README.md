@@ -76,7 +76,7 @@ My Plan:
 
 5. AWS Web Application Firewall (WAF_ Configuration)
 - Task 5.1- Define WAF rules that filter incoming web traffic to block common attacks like SQL injection and XSS.
-- Task 5.2- If using an Application Load Balancer (ALB), associate the WAF with the ALB to filter incoming requests before they reach the web servers, which enhances the security of the web application by filtering traffic at the load balancer level.
+- Task 5.2- Use WAF to filter incoming requests before they reach the web servers, which enhances the security of the web application by filtering traffic at the load balancer level.
      - Reference: [WAF and ALB Integration](https://docs.aws.amazon.com/waf/latest/developerguide/waf-regional-alb.html)
 - Task 5.3- Enable logging for WAF to monitor the types of requests being blocked or allowed.
 
